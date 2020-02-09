@@ -7,30 +7,30 @@
 
 import Foundation
 
-extension TimeInterval {
+public extension TimeInterval {
     /// Extracts housr from this time interval
-    var hours: Int {
+    public var hours: Int {
         get {
            (Int(floor(self)) - (Int(floor(self)) % 3600)) / 3600
         }
     }
     
     /// Extracts the minutes from this time interval.
-    var minutes: Int {
+   public var minutes: Int {
         get {
             (Int(floor(self)) % 3600) / 60
         }
     }
     
     /// Extracts seconds from this time interval
-    var seconds: Int {
+   public var seconds: Int {
         get {
             (Int(floor(self)) % 3600) - (60 * ((Int(floor(self)) % 3600) / 60))
         }
     }
     
     /// The time format string representation of thie time interval (HH:MM:SS)
-    var timeString: String {
+    public var timeString: String {
         get {
             let hours = self.hours.asLeftPaddedString(ofLength: 2)
             let minutes = self.minutes.asLeftPaddedString(ofLength: 2)

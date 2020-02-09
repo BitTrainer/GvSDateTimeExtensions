@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
     /// Will left pad the string value of the integer with zero until the specified string length is reached.
-    func asLeftPaddedString(ofLength length:Int) -> String {
+    public func asLeftPaddedString(ofLength length:Int) -> String {
         let stringValue = self.description
         if stringValue.count >= length {
             return stringValue
